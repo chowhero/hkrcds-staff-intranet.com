@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>HKRCDS staff intranet</h2>
+        <h2>Login 登入</h2>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username 用戶名稱" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password 密碼" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="error-message" class="error-message"></div>
+    </div>
+
+    <script>
+        // 模擬使用者資料
+        const users = {
+            'admin': 'password',
+            'user1': 'password1',
+            'user2': 'password2',
+            'user3': 'password3'
+        };
+
+        const form = document.getElementById('login-form');
+        const errorMessage = document.getElementById('error-message');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (users.hasOwnProperty(username) && users[username] === password) {
+                // 登入成功,可以重新導向到其他頁面
+                window.location.href = 'staff intranet.html';
+            } else {
+                errorMessage.textContent = 'Wrong username or password!';
+            }
+        });
+    </script>
+</body>
+</html>

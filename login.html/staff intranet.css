@@ -1,0 +1,38 @@
+body {
+    background: url(oj_img.jpg) no-repeat;
+	background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: orange;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: #313131;
+}
+
+div {
+    color: #fff;
+    font-size: 50px;
+    padding: 60px;
+    text-align: center;
+}
