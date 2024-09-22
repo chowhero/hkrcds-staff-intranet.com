@@ -39,7 +39,7 @@
 
             if (users.hasOwnProperty(username) && users[username] === password) {
                 // 登入成功,可以重新導向到其他頁面
-                <a href="https://sites.google.com/view/hkrcds/home" target=_blank </a>
+                window.location.href = 'https://sites.google.com/view/hkrcds/home'
             } else {
                 errorMessage.textContent = 'Wrong username or password!';
             }
